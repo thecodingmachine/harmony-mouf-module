@@ -26,6 +26,6 @@ the Mouf module:
 ```php
 <?php
 return [
-    new Harmony\Module\MoufModule();
+    new Harmony\Module\MoufModule()
 ];
 ```

@@ -8,6 +8,7 @@
  * file that was distributed with this source code.
  */
 namespace Harmony\Module;
+use Mouf\MoufManager;
 
 /**
  * Classes implementing this interface represent modules that can be used by Harmony.
@@ -25,7 +26,7 @@ class MoufModule implements HarmonyModuleInterface
      * @return ContainerInterface|null
      */
     public function getContainer(ContainerInterface $rootContainer) {
-        // TODO
+        return MoufManager::getMoufManager();
     }
 
     /**
