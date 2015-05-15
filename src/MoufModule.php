@@ -8,6 +8,8 @@
  * file that was distributed with this source code.
  */
 namespace Harmony\Module;
+
+use Interop\Container\ContainerInterface;
 use Mouf\MoufManager;
 
 /**
@@ -26,6 +28,7 @@ class MoufModule implements HarmonyModuleInterface
      * @return ContainerInterface|null
      */
     public function getContainer(ContainerInterface $rootContainer) {
+        require_once __DIR__.'/../../../../mouf/Mouf.php';
         return MoufManager::getMoufManager();
     }
 
@@ -35,6 +38,7 @@ class MoufModule implements HarmonyModuleInterface
      * @return ContainerExplorerInterface|null
      */
     public function getContainerExplorer() {
-        // TODO
+        require_once __DIR__.'/../../../../mouf/Mouf.php';
+        return new MoufContainerExplorer();
     }
 }

@@ -25,6 +25,6 @@ class MoufContainerExplorer implements ContainerExplorerInterface
      */
     public function getInstancesByType($type)
     {
-        
+        return MoufManager::getMoufManager()->findInstances($type);
     }
 }
